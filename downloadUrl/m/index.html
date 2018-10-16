@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="blank">
+<meta name="format-detection" content="telephone=no">
+<title>大成游戏厅</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="css/ktionbase.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width:414px)">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/touchslide.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+<div id="header" class="pr">
+  <div id="logo" class="pa">
+    <a href="index.html" title="大成游戏厅"><img src="images/logo.png" width="" height="" alt=""></a>
+  </div>
+</div>
+<div id="banner" class="pr hidden">
+  <div id="banner-img">
+    <ul>
+      <li><a href="#" title=""><img src="images/banner-1.jpg" alt=""></a></li>
+      <li><a href="#" title=""><img src="images/banner-2.jpg" alt=""></a></li>
+    </ul>
+  </div>
+  <div id="banner-btn" class="pa">
+    <dl>
+      <dd></dd>
+      <dd></dd>
+    </dl>
+  </div>
+</div>
+<div id="main">
+      
+  <div id="download">
+    <h3>——<span>双端下载</span>——</h3>
+    <div id="code" class="fl"><img src="images/code.jpg" width="" height="" alt=""></div>
+    <div id="button" class="fr">
+      <dl>
+        <dd><a href="itms-services://?action=download-manifest&url=https://d1.meiri0769.net/download/hldpk/hldpk.plist" title="iPhone 版下载" target="_blank"><span class="iphone">iPhone 版下载</span></a></dd>
+        <dd><a href="https://d2.meiri0769.net/download/hldpk/dpk_ard_ok.apk" title="Android 版下载"><span class="android" target="_blank">Android 版下载</span></a></dd>
+      </dl>
+    </div>
+    <div class="clear"></div>
+  </div>
+
+  <div id="text">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <h2>大成游戏厅APP是什么？</h2>
+    <p>一款游戏+商城+社交的APP平台，融合了当下各种类型游戏，让用户下载一款APP，即可进行多种游戏娱乐。</p>
+    <p>****************************************</p>
+  </div>
+
+      <div id="text">
+        <h2>大成游戏厅APP有什么特别之处？</h2>
+        <p>用户在大成游戏厅APP平台上玩游戏，可以得到积分，积分可以在平台的商城中免费兑换商品。</p>
+        <p>****************************************</p>
+      </div>
+      <div id="text">
+        <h2>大成游戏厅APP的社交有什么特别之处？</h2>
+        <p>不仅采用了当下较为热门的聊天互动、游戏交友、排行竞赛等，而且将结婚、直播等流行元素加入其中，让用户在娱乐的同时、可以获得更多知识和新的朋友</p>
+      </div>
+
+</div>
+<div id="fh"></div>
+<div id="footer" class="pf">
+  <p>玩家QQ群：814715579&nbsp;&nbsp;&nbsp;&nbsp;客服微信：hldpk888&nbsp;&nbsp;&nbsp;&nbsp;<script src="https://s19.cnzz.com/z_stat.php?id=1274593472&web_id=1274593472" language="JavaScript"></script></p>
+</div>
+<div id="msg" class="pf">
+  <section>
+    <img src="images/msgg.png" width="" height="" alt="">
+    <button>知道了</button>
+  </section>
+</div>
+<div id="auth" class="pf tc">
+	<section>
+		<h2>温馨提示</h2>
+		<p>因苹果公司政策原因，iOS首次安装企业级应用时会出现《未受信任的企业级开发者》提示，请按照以下步骤操作。</p>
+		<img src="images/auth.png" width="" height="" alt="">
+		<button class="pf">知道了</button>
+	</section>
+</div>
+<script type="text/javascript">
+  if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+    var ua = navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i)=="micromessenger"){
+      $('#msg').show();
+    }else if(ua.match(/QQ/i) == "qq"){
+      $('#msg').show();
+    }else{
+    	var u = navigator.userAgent;
+	    if(u.indexOf('iPhone') > -1){
+				setTimeout(function(){
+          $('#auth').fadeIn();
+        },6000);
+			}
+    }
+  }else{
+    window.location.href = "../index.html";
+  }
+</script>
+</body>
+</html>
