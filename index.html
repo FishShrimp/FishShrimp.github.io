@@ -1,84 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>大成游戏厅</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<link rel="stylesheet" type="text/css" href="css/ktionbase.min.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/js.js"></script>
-<script type="text/javascript">
-	if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
-    window.location.href = "m/index.html";
-	}
-</script>
+  <meta charset="utf-8">
+
+  <title>Cocos Creator | hello_world</title>
+
+  <!--http://www.html5rocks.com/en/mobile/mobifying/-->
+  <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1"/>
+
+  <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- force webkit on 360 -->
+  <meta name="renderer" content="webkit"/>
+  <meta name="force-rendering" content="webkit"/>
+  <!-- force edge on IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- force full screen on some browser -->
+  <meta name="full-screen" content="yes"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+  
+  <!-- force screen orientation on some browser -->
+  <meta name="screen-orientation" content="landscape"/>
+  <meta name="x5-orientation" content="landscape">
+
+  <!--fix fireball/issues/3568 -->
+  <!--<meta name="browsermode" content="application">-->
+  <meta name="x5-page-mode" content="app">
+
+  <!--<link rel="apple-touch-icon" href=".png" />-->
+  <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+
+  <link rel="stylesheet" type="text/css" href="style-mobile.6e9cd.css"/>
+  <link rel="icon" href="favicon.8de18.ico"/>
 </head>
 <body>
-<div id="header">
-  <div class="wrapper auto pr">
-		<!--
-    <div id="logo" class="pa">
-      <a href="index.html" title="大成游戏厅"><img src="images/logo2.png" width="160" height="160" alt=""></a>
-		</div>
-	-->
+  <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+  <div id="splash">
+    <div class="progress-bar stripes">
+      <span style="width: 0%"></span>
+    </div>
   </div>
-</div>
-<div id="main" class="wrapper auto">
-	<div id="left" class="fl">
-		<div id="app"><img src="images/app.png" width="300" height="600" alt=""></div>
-	</div>
-	<div id="right" class="fr">
 
-		<div id="download">
+<script src="src/settings.99158.js" charset="utf-8"></script>
 
-	    <h3>——<span>双端下载</span>——</h3>
-	    <div id="code" class="fl"><img src="images/code.jpg" width="140" height="140" alt=""></div>
-	    <div id="button" class="fr">
-	      <dl>
-	        <dd>
-						<a title="iPhone 版下载" target="_blank" onclick = "alert('iOS 版本正在开发中')">
-							<span class="iphone">iPhone 版下载</span>
-						</a>
-					</dd>
-	        <dd>
-						<a title="Android 版下载" target="_blank" onclick = "alert('android版本正在开发中')">
-							<span class="android">Android 版下载</span>
-						</a>
-					</dd>
-	      </dl>
-	    </div>
-	    <div class="clear"></div>
-	  </div>
+<script src="main.24f69.js" charset="utf-8"></script>
 
-	</div>
+<script type="text/javascript">
+(function () {
+    // open web debugger console
+    if (typeof VConsole !== 'undefined') {
+        window.vConsole = new VConsole();
+    }
 
-	<div id = "content" class="fr">
-		<div id="text">
-	    	<h2>大成游戏厅APP是什么？</h2>
-	    	<p>一款游戏+商城+社交的APP平台，融合了当下各种类型游戏，让用户下载一款APP，即可进行多种游戏娱乐。</p>
-	    	<p>****************************************</p>
-	  	</div>
+    var debug = window._CCSettings.debug;
+    var splash = document.getElementById('splash');
+    splash.style.display = 'block';
 
-	  	<div id="text">
-	    	<h2>大成游戏厅APP有什么特别之处？</h2>
-	    	<p>用户在大成游戏厅APP平台上玩游戏，可以得到积分，积分可以在平台的商城中免费兑换商品。</p>
-	    	<p>****************************************</p>
-	  	</div>
-	  	<div id="text">
-	    	<h2>大成游戏厅APP的社交有什么特别之处？</h2>
-	    	<p>不仅采用了当下较为热门的聊天互动、游戏交友、排行竞赛等，而且将结婚、直播等流行元素加入其中，让用户在娱乐的同时、可以获得更多知识和新的朋友</p>
-	  	</div>
-	</div>
-	<div class="clear"></div>
-</div>
-<div id="footer">
-  <div class="wrapper auto">
-    <p class="fl">Copyright © 2018&nbsp;&nbsp;大成游戏厅&nbsp;&nbsp;版权所有&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<script src="https://s19.cnzz.com/z_stat.php?id=1274593472&web_id=1274593472" language="JavaScript"></script></p>
-    <!----><p class="fr">玩家QQ群：暂无&nbsp;&nbsp;&nbsp;&nbsp;客服微信：L1830063870</p>
-    <div class="clear"></div>
-  </div>
-</div>
+    function loadScript (moduleName, cb) {
+      function scriptLoaded () {
+          document.body.removeChild(domScript);
+          domScript.removeEventListener('load', scriptLoaded, false);
+          cb && cb();
+      };
+      var domScript = document.createElement('script');
+      domScript.async = true;
+      domScript.src = moduleName;
+      domScript.addEventListener('load', scriptLoaded, false);
+      document.body.appendChild(domScript);
+    }
+
+    loadScript(debug ? 'cocos2d-js.js' : 'cocos2d-js-min.8e141.js', function () {
+      if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
+        loadScript(debug ? 'physics.js' : 'physics-min.b5fcb.js', window.boot);
+      }
+      else {
+        window.boot();
+      }
+    });
+})();
+</script>
 </body>
 </html>
